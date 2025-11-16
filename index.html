@@ -10,9 +10,7 @@
 <body>
     <div class="hearts" id="hearts"></div>
 
-    <audio autoplay loop>
-        <source src="music1.mp3" type="audio/mpeg">
-    </audio>
+
     
     <div class="container">
         <header>
@@ -94,6 +92,7 @@
             <button class="surprise-btn" id="surpriseBtn">Click for a Special Surprise!</button>
         </div>
     </div>
+        <audio id="music" src="music1.mp3" loop></audio>
     
     <div class="surprise-modal" id="surpriseModal">
         <button class="close-btn" id="closeModal">&times;</button>
@@ -112,5 +111,17 @@
     </footer>
 
     <script src="script.js"></script>
+
+
+
+<script>
+document.addEventListener("click", () => {
+    document.getElementById("music").play();
+}, { once: true });
+</script>
+
+
+
+</script>
 </body>
 </html>
