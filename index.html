@@ -89,7 +89,7 @@
         </div>
         
         <div class="surprise-container">
-            <button class="surprise-btn" id="surpriseBtn">Click for a Special Surprise!</button>
+            <button class="surprise-btn" onclick="playSong()" id="surpriseBtn">Click for a Special Surprise!</button>
         </div>
     </div>
         <audio id="music" src="music1.mp3" loop></audio>
@@ -115,9 +115,10 @@
 
 
 <script>
-document.addEventListener("click", () => {
-    document.getElementById("music").play();
-}, { once: true });
+function playSong() {
+    const song = document.getElementById("music");
+    song.play();
+}
 </script>
 
 
@@ -126,3 +127,4 @@ document.addEventListener("click", () => {
 </body>
 
 </html>
+
