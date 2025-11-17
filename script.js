@@ -134,3 +134,17 @@
             // Start typewriter effect after a short delay
             setTimeout(typeWriter, 1000);
         });
+
+        // Show popup when page loads
+window.onload = function() {
+    document.getElementById("entryPopup").style.display = "flex";
+};
+
+// When user clicks Enter
+document.getElementById("enterBtn").addEventListener("click", function() {
+    const popup = document.getElementById("entryPopup");
+    const song = document.getElementById("music");
+
+    popup.style.display = "none";   // hide popup
+    song.play();                    // play music
+});
